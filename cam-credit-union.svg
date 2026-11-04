@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <title>CAM Credit Union building</title>
+  <rect x="74" y="150" width="332" height="156" fill="#ffffff" stroke="#183d53" stroke-width="4"/>
+  <path d="M54 148 240 52 426 148Z" fill="#d6e4dc" stroke="#183d53" stroke-width="4" stroke-linejoin="round"/>
+  <text x="240" y="126" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="36" text-anchor="middle" fill="#183d53">CAM</text>
+  <rect x="64" y="150" width="352" height="20" fill="#183d53"/>
+  <rect x="104" y="190" width="54" height="70" fill="#e5eef3" stroke="#183d53" stroke-width="3"/>
+  <path d="M131 190V260M104 225H158" stroke="#183d53" stroke-width="3"/>
+  <rect x="322" y="190" width="54" height="70" fill="#e5eef3" stroke="#183d53" stroke-width="3"/>
+  <path d="M349 190V260M322 225H376" stroke="#183d53" stroke-width="3"/>
+  <rect x="202" y="200" width="76" height="106" fill="#e5eef3" stroke="#183d53" stroke-width="3"/>
+  <path d="M240 200V306" stroke="#183d53" stroke-width="3"/>
+  <path d="M230 252V265M250 252V265" stroke="#608675" stroke-width="4"/>
+  <rect x="184" y="184" width="112" height="16" fill="#608675"/>
+  <path d="M60 308H420M46 322H434" stroke="#183d53" stroke-width="5"/>
+  <path d="M24 335H456" stroke="#608675" stroke-width="3"/>
+</svg>
