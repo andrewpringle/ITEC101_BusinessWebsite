@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | CAM Credit Union</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #263238;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 22px 24px;
+      border-bottom: 4px solid #608675;
+      text-align: center;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+    }
+
+    .header-brand .header-logo {
+      width: 120px;
+      height: auto;
+      margin: 0;
+      flex: 0 0 auto;
+    }
+
+    .header-brand h1 {
+      margin: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      padding: 9px 12px;
+      background-color: #183d53;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .company-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #183d53;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 25px 24px;
+      background-color: #ffffff;
+    }
+
+    .hero {
+      padding: 40px 0;
+      background-color: #edf3f6;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      gap: 36px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin: 0 auto 18px;
+      color: #183d53;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .intro {
+      padding: 30px 24px;
+      margin-bottom: 32px;
+      background-color: #edf3f6;
+      text-align: center;
+    }
+
+    .intro p {
+      margin-bottom: 0;
+    }
+
+    section.content {
+      padding: 32px 0;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #183d53;
+      font-size: 26px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 40px;
+    }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 19px;
+    }
+
+    .services article {
+      padding: 18px 20px;
+      border-top: 3px solid #608675;
+      background-color: #f5f7f6;
+    }
+
+    .services p {
+      margin: 0;
+    }
+
+    .illustration {
+      font-size: 52px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .card-content {
+      padding: 0;
+    }
+
+    .services .price {
+      margin-top: 14px;
+      color: #183d53;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .services ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .about {
+      border-top: 1px solid #d5dce0;
+    }
+
+    .about p {
+      max-width: 820px;
+      margin: 0 0 14px;
+    }
+
+    .promo {
+      background-color: #edf3f6;
+      border-left: 4px solid #608675;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    .promo h2 {
+      color: #183d53;
+    }
+
+    .promo-code {
+      display: inline-block;
+      background-color: #183d53;
+      color: #ffffff;
+      padding: 12px 25px;
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .process {
+      padding: 35px 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    .step {
+      background-color: #f5f7f6;
+      border-top: 3px solid #608675;
+      padding: 25px;
+    }
+
+    .step-number {
+      display: inline-block;
+      background-color: #183d53;
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 12px;
+      line-height: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .step p {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 20px 24px;
+      border-top: 1px solid #d5dce0;
+      color: #52616a;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .company-name {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 32px 0;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      img {
+        max-width: 280px;
+      }
+
+      .services,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Business name and navigation -->
+  <header>
+    <div class="header-brand">
+      <img class="header-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0ODAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNDgwIDM2MCI+CiAgPHRpdGxlPkNBTSBDcmVkaXQgVW5pb24gYnVpbGRpbmc8L3RpdGxlPgogIDxyZWN0IHg9Ijc0IiB5PSIxNTAiIHdpZHRoPSIzMzIiIGhlaWdodD0iMTU2IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMxODNkNTMiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwYXRoIGQ9Ik01NCAxNDggMjQwIDUyIDQyNiAxNDhaIiBmaWxsPSIjZDZlNGRjIiBzdHJva2U9IiMxODNkNTMiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjI0MCIgeT0iMTI2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxODNkNTMiPkNBTTwvdGV4dD4KICA8cmVjdCB4PSI2NCIgeT0iMTUwIiB3aWR0aD0iMzUyIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTgzZDUzIi8+CiAgPHJlY3QgeD0iMTA0IiB5PSIxOTAiIHdpZHRoPSI1NCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2U1ZWVmMyIgc3Ryb2tlPSIjMTgzZDUzIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8cGF0aCBkPSJNMTMxIDE5MFYyNjBNMTA0IDIyNUgxNTgiIHN0cm9rZT0iIzE4M2Q1MyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHJlY3QgeD0iMzIyIiB5PSIxOTAiIHdpZHRoPSI1NCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2U1ZWVmMyIgc3Ryb2tlPSIjMTgzZDUzIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8cGF0aCBkPSJNMzQ5IDE5MFYyNjBNMzIyIDIyNUgzNzYiIHN0cm9rZT0iIzE4M2Q1MyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHJlY3QgeD0iMjAyIiB5PSIyMDAiIHdpZHRoPSI3NiIgaGVpZ2h0PSIxMDYiIGZpbGw9IiNlNWVlZjMiIHN0cm9rZT0iIzE4M2Q1MyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTI0MCAyMDBWMzA2IiBzdHJva2U9IiMxODNkNTMiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxwYXRoIGQ9Ik0yMzAgMjUyVjI2NU0yNTAgMjUyVjI2NSIgc3Ryb2tlPSIjNjA4Njc1IiBzdHJva2Utd2lkdGg9IjQiLz4KICA8cmVjdCB4PSIxODQiIHk9IjE4NCIgd2lkdGg9IjExMiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzYwODY3NSIvPgogIDxwYXRoIGQ9Ik02MCAzMDhINDIwTTQ2IDMyMkg0MzQiIHN0cm9rZT0iIzE4M2Q1MyIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPHBhdGggZD0iTTI0IDMzNUg0NTYiIHN0cm9rZT0iIzYwODY3NSIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjwvc3ZnPgo=" alt="CAM Credit Union building logo" width="120" height="90">
+      <h1>CAM Credit Union LLC</h1>
+    </div>
+    <p>Your money. Your goals. Your future.</p>
+
+    <nav aria-label="Page navigation">
+      <a href="#services">Our Services</a>
+      <a href="#promotion">Special Offer</a>
+      <a href="#process">How It Works</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Introduction -->
+    <section class="intro">
+      <h2>Small Steps. Bigger Possibilities.</h2>
+      <p>
+        Whether you are saving for something special or managing
+        everyday expenses, CAM has a service for you.
+      </p>
+    </section>
+
+    <!-- Catalog of four fictional services -->
+    <section id="services">
+      <h2>Explore Our Services</h2>
+
+      <div class="services">
+
+        <article class="card">
+          <div class="illustration">
+            <span role="img" aria-label="Bank">🏦</span>
+          </div>
+
+          <div class="card-content">
+            <h3>Everyday Checking</h3>
+            <p>
+              Give your paycheck a home and keep everyday
+              spending simple.
+            </p>
+
+            <p class="price">$0 monthly maintenance fee</p>
+
+            <ul>
+              <li>Debit card included</li>
+              <li>Online account access</li>
+              <li>No minimum balance</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="illustration">
+            <span role="img" aria-label="Money bag">💰</span>
+          </div>
+
+          <div class="card-content">
+            <h3>Dream Builder Savings</h3>
+            <p>
+              Saving for a vacation, a car, or a rainy day?
+              Start building your next big dream.
+            </p>
+
+            <p class="price">$5 opening deposit</p>
+
+            <ul>
+              <li>Opening deposit stays in your account</li>
+              <li>No monthly maintenance fee</li>
+              <li>Automatic savings transfers</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="illustration">
+            <span role="img" aria-label="Growing plant">🌱</span>
+          </div>
+
+          <div class="card-content">
+            <h3>Next Step Personal Loan</h3>
+            <p>
+              Take care of an unexpected expense or get
+              your next project moving.
+            </p>
+
+            <p class="price">$0 application fee</p>
+
+            <ul>
+              <li>Fictional loan amounts: $500–$10,000</li>
+              <li>Monthly repayment plans</li>
+              <li>Approval required; borrowing costs vary</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="illustration">
+            <span role="img" aria-label="Credit card">💳</span>
+          </div>
+
+          <div class="card-content">
+            <h3>CAM Everyday Credit</h3>
+            <p>
+              Add flexibility to your spending while
+              keeping track of purchases in one place.
+            </p>
+
+            <p class="price">$0 annual fee</p>
+
+            <ul>
+              <li>Online payment options</li>
+              <li>Monthly spending statements</li>
+              <li>Credit approval required; interest may apply</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Featured promotion -->
+    <section id="promotion" class="promo">
+      <h2>Featured Offer: Fresh Start Bundle</h2>
+
+      <p>
+        Open Everyday Checking and Dream Builder Savings
+        together to receive a
+        <strong>$25 welcome bonus!</strong>
+      </p>
+
+      <p>Use this promotion code on your application:</p>
+
+      <div class="promo-code">CAMSTART25</div>
+
+      <p>
+        <small>
+          Offer for first-time members. Both accounts must
+          be approved and savings funded with $5. One bonus per member.
+        </small>
+      </p>
+    </section>
+
+    <!-- Three-step process -->
+    <section id="process" class="process">
+      <h2>How It Works</h2>
+      <p>Get started in three simple steps.</p>
+
+      <ol class="steps">
+
+        <li class="step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <h3>Choose Your Service</h3>
+          <p>
+            Explore our services and choose the option
+            that fits your financial goals.
+          </p>
+        </li>
+
+        <li class="step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <h3>Submit an Application</h3>
+          <p>
+            Complete an online
+            application and receive a submission confirmation.
+          </p>
+        </li>
+
+        <li class="step">
+          <span class="step-number" aria-hidden="true">3</span>
+          <h3>Receive a Decision</h3>
+          <p>
+            Our team reviews your application and contacts
+            you with a decision and the next steps.
+          </p>
+        </li>
+
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CAM Credit Union LLC</p>
+  </footer>
+
+</body>
+</html>
