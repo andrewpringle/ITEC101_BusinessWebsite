@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- Author: CAM Credit Union LLC project team | Date: November 2, 2026 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about CAM Credit Union LLC, a fictional credit union created for a class project.">
+  <title>CAM Credit Union LLC | Home</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #263238;
+      background-color: #ffffff;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 22px 0; border-bottom: 4px solid #608675; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .header-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 24px; }
+    nav a {
+      color: #183d53;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    nav a[aria-current="page"], nav a:hover { border-bottom-color: #608675; }
+    a:focus-visible { outline: 3px solid #183d53; outline-offset: 4px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #183d53;
+      color: #ffffff;
+      border: 1px solid #183d53;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .button:hover { background-color: #28536b; }
+    .button.secondary { background-color: #ffffff; color: #183d53; }
+    .button.secondary:hover { background-color: #e0e8ed; }
+    .logo {
+      padding: 9px 12px;
+      background-color: #183d53;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .company-name { margin: 0; font-size: 20px; font-weight: bold; }
+    main { background-color: #ffffff; }
+    .hero { padding: 40px 0; background-color: #edf3f6; }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      gap: 36px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto;
+    }
+    h1 {
+      max-width: 680px;
+      margin: 0 0 18px;
+      color: #183d53;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+    .hero p { max-width: 740px; margin: 0; font-size: 18px; }
+    section.content { padding: 32px 0; }
+    h2 { margin: 0 0 20px; color: #183d53; font-size: 26px; }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 40px; }
+    h3 { margin: 0 0 6px; font-size: 19px; }
+    .services article {
+      padding: 18px 20px;
+      border-top: 3px solid #608675;
+      background-color: #f5f7f6;
+    }
+    .services p { margin: 0; }
+    .about { border-top: 1px solid #d5dce0; }
+    .about p { max-width: 820px; margin: 0 0 14px; }
+    footer { padding: 20px 0; border-top: 1px solid #d5dce0; color: #52616a; font-size: 13px; }
+    footer p { margin: 0; }
+    @media (max-width: 600px) {
+      .company-name { font-size: 17px; }
+      .hero { padding: 32px 0; }
+      h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 24px; }
+      img { max-width: 280px; }
+      .services { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-layout">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">CAM</span>
+        <p class="company-name">CAM Credit Union LLC</p>
+      </div>
+      <!-- Products and Contact link to future pages; those pages are not included. -->
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="welcome-heading">
+      <div class="container hero-layout">
+        <div>
+          <h1 id="welcome-heading">A simpler start to your financial future.</h1>
+          <p>CAM Credit Union LLC offers checking and savings accounts, loans, and credit cards for customers managing everyday finances and planning ahead. Our goal is to provide a premier banking experience with a simpler way to apply for an account online.</p>
+          <div class="actions">
+            <a class="button" href="products.html">Explore Our Products</a>
+            <a class="button secondary" href="contact.html">Get in Touch</a>
+          </div>
+        </div>
+        <img src="cam-credit-union.svg" width="480" height="360" alt="Illustration of a CAM Credit Union building with a CAM sign above the entrance.">
+      </div>
+    </section>
+    <section class="content" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading">Our Services</h2>
+        <div class="services">
+          <article>
+            <h3>Checking Accounts</h3>
+            <p>Manage money for everyday expenses and regular banking needs.</p>
+          </article>
+          <article>
+            <h3>Savings Accounts</h3>
+            <p>Set money aside for future goals and unexpected expenses.</p>
+          </article>
+          <article>
+            <h3>Loans</h3>
+            <p>Explore borrowing options for your financial plans.</p>
+          </article>
+          <article>
+            <h3>Credit Cards</h3>
+            <p>Consider credit options for purchases and everyday spending.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About CAM</h2>
+        <p>CAM Credit Union LLC was founded on a shared vision from Matt Barret, Carter McDougal, and Andrew Pringle. Our mission is to welcome new investors and provide a premier banking experience.</p>
+        <p>Our proposed online application system would reduce paperwork and the need for in-person visits. Customers would submit applications digitally, while bookkeepers and managers would review and track them.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 CAM Credit Union LLC. Fictional business created for a class project.</p>
+    </div>
+  </footer>
+</body>
+</html>
