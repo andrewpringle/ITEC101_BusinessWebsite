@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet the team behind CAM Credit Union LLC and connect with our team.">
+  <title>Our Story & Contact | CAM Credit Union LLC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #263238;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 4px solid #608675;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 96px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+
+    .company-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    main {
+      background-color: #ffffff;
+    }
+
+    .hero {
+      padding: 40px 0;
+      background-color: #edf3f6;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      gap: 36px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin: 0 0 18px;
+      color: #183d53;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    section.content {
+      padding: 32px 0;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #183d53;
+      font-size: 26px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 40px;
+    }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 19px;
+    }
+
+    .services article {
+      padding: 18px 20px;
+      border-top: 3px solid #608675;
+      background-color: #f5f7f6;
+    }
+
+    .services p {
+      margin: 0;
+    }
+
+    .about {
+      border-top: 1px solid #d5dce0;
+    }
+
+    .about p {
+      max-width: 820px;
+      margin: 0 0 14px;
+    }
+
+    footer {
+      padding: 20px 0;
+      border-top: 1px solid #d5dce0;
+      color: #52616a;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* About and contact page components */
+    a {
+      color: #183d53;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .navlinks a {
+      text-decoration: none;
+    }
+
+    .navlinks a:hover {
+      text-decoration: underline;
+    }
+
+    .brand small {
+      display: none;
+    }
+
+    .brand strong {
+      font-size: 20px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      border: 0;
+      border-radius: 3px;
+      background: #183d53;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .eyebrow {
+      font-size: 11px !important;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 14px !important;
+      color: #456755;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #456755;
+    }
+
+    .hero .intro {
+      margin: 0 0 24px;
+    }
+
+    .hero-art {
+      background: #225345;
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .hero-art svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .art-caption {
+      display: block;
+      color: #edf3f6;
+      text-align: center;
+      font-size: 9px;
+      padding: 0 10px 16px;
+      letter-spacing: 1px;
+    }
+
+    .story,
+    .contact-grid,
+    .visit {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 40px;
+    }
+
+    .story-copy p {
+      margin: 0 0 14px;
+    }
+
+    .section-top {
+      margin-bottom: 24px;
+    }
+
+    .section-note {
+      color: #52616a;
+      font-size: 14px;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .person {
+      padding: 20px;
+      border-top: 3px solid #608675;
+      background: #f5f7f6;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      background: #e0e9e4;
+      color: #183d53;
+      border-radius: 50%;
+      font-size: 21px;
+      margin-bottom: 16px;
+    }
+
+    .role {
+      color: #456755;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .person p:last-child {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .contact-band {
+      background: #edf3f6;
+      padding: 32px 0;
+    }
+
+    .contact-intro {
+      margin-bottom: 24px;
+    }
+
+    .contact-list {
+      margin: 0;
+    }
+
+    .contact-list div {
+      margin: 0 0 18px;
+    }
+
+    dt {
+      font-size: 12px;
+      font-weight: bold;
+      color: #456755;
+    }
+
+    dd {
+      margin: 3px 0 0;
+    }
+
+    .social {
+      font-size: 14px;
+    }
+
+    .form {
+      background: white;
+      padding: 24px;
+      border-top: 3px solid #608675;
+    }
+
+    .form>p {
+      font-size: 13px;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aebcb7;
+      border-radius: 3px;
+      background: white;
+      color: #263238;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form button {
+      width: 100%;
+    }
+
+    .notice {
+      font-size: 12px !important;
+      color: #52616a;
+    }
+
+    .status {
+      padding: 12px;
+      background: #edf3f6;
+    }
+
+    .hours {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .hours caption {
+      text-align: left;
+    }
+
+    .hours th,
+    .hours td {
+      padding: 9px 0;
+      border-bottom: 1px solid #d5dce0;
+    }
+
+    .hours th {
+      text-align: left;
+      font-weight: normal;
+    }
+
+    .hours td {
+      text-align: right;
+    }
+
+    .faq details {
+      border-bottom: 1px solid #d5dce0;
+      padding: 14px 0;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .faq details p {
+      font-size: 14px;
+      margin: 12px 0 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    :focus-visible {
+      outline: 3px solid #608675;
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      top: -80px;
+      left: 10px;
+      background: white;
+      padding: 10px;
+    }
+
+    .skip:focus {
+      top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .company-name {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 32px 0;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      img {
+        max-width: 280px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .navlinks {
+        gap: 16px;
+      }
+
+      .navlinks .button {
+        padding: 8px 12px;
+      }
+
+      .hero-art {
+        max-width: 320px;
+        margin: auto;
+      }
+
+      .story,
+      .contact-grid,
+      .visit,
+      .team,
+      .fields {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .fields {
+        gap: 0;
+      }
+
+      footer .container {
+        display: block;
+      }
+
+      footer span {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+
+    /* Header typography */
+    .brand small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .brand strong {
+      display: block;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="container" aria-label="Main navigation"><a href="page3.html" class="brand"
+        aria-label="CAM Credit Union About page"><svg class="brand-logo" aria-hidden="true" focusable="false"
+          xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+          <title>CAM Credit Union building</title>
+          <rect x="74" y="150" width="332" height="156" fill="#ffffff" stroke="#183d53" stroke-width="4" />
+          <path d="M54 148 240 52 426 148Z" fill="#d6e4dc" stroke="#183d53" stroke-width="4" stroke-linejoin="round" />
+          <text x="240" y="126" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="36"
+            text-anchor="middle" fill="#183d53">CAM</text>
+          <rect x="64" y="150" width="352" height="20" fill="#183d53" />
+          <rect x="104" y="190" width="54" height="70" fill="#e5eef3" stroke="#183d53" stroke-width="3" />
+          <path d="M131 190V260M104 225H158" stroke="#183d53" stroke-width="3" />
+          <rect x="322" y="190" width="54" height="70" fill="#e5eef3" stroke="#183d53" stroke-width="3" />
+          <path d="M349 190V260M322 225H376" stroke="#183d53" stroke-width="3" />
+          <rect x="202" y="200" width="76" height="106" fill="#e5eef3" stroke="#183d53" stroke-width="3" />
+          <path d="M240 200V306" stroke="#183d53" stroke-width="3" />
+          <path d="M230 252V265M250 252V265" stroke="#608675" stroke-width="4" />
+          <rect x="184" y="184" width="112" height="16" fill="#608675" />
+          <path d="M60 308H420M46 322H434" stroke="#183d53" stroke-width="5" />
+          <path d="M24 335H456" stroke="#608675" stroke-width="3" />
+        </svg><span class="company-name">CAM Credit Union LLC</span></a>
+      <div class="navlinks"><a href="#story">Our story</a><a href="#team">The team</a><a class="button"
+          href="#contact">Let’s connect <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div><span class="eyebrow">About us & contact / CAM Credit Union</span>
+          <h1 id="hero-title">Big ideas.<br>Local roots.<br><em>Your next chapter.</em></h1>
+          <p class="intro">One team. One shared vision: make everyday banking simpler, more personal, and a little less
+            paperwork.</p><a href="#story" class="button">Get to know CAM <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art"><svg viewBox="0 0 460 400" role="img"
+            aria-label="Illustration of three plants growing from a shared foundation">
+            <defs>
+              <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+                <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#ffffff" stroke-opacity=".07" />
+              </pattern>
+            </defs>
+            <rect width="460" height="400" fill="url(#grid)" />
+            <circle cx="355" cy="85" r="40" fill="#d6ed8a" />
+            <path d="M65 316H400" stroke="#adbf9a" />
+            <path d="M107 315V219M229 315V145M351 315V228" stroke="#d6ed8a" stroke-width="5" />
+            <path d="M108 256C60 255 62 214 66 201C105 204 119 230 108 256Z" fill="#a6c77e" />
+            <path d="M108 228C109 186 143 176 162 178C158 218 135 233 108 228Z" fill="#d6ed8a" />
+            <path d="M229 213C175 208 170 163 177 145C220 149 239 174 229 213Z" fill="#a6c77e" />
+            <path d="M229 180C230 130 269 111 294 116C293 161 267 183 229 180Z" fill="#d6ed8a" />
+            <path d="M351 269C310 268 302 236 309 220C340 222 355 240 351 269Z" fill="#a6c77e" />
+            <path d="M351 240C350 205 377 190 397 194C396 228 376 242 351 240Z" fill="#d6ed8a" />
+            <rect x="79" y="289" width="302" height="26" rx="5" fill="#eeeccf" /><text x="230" y="344"
+              text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#eeeccf">Good things grow
+              together.</text>
+          </svg><span class="art-caption">ROOTED IN CONNECTION. BUILT FOR WHAT’S NEXT.</span></div>
+      </div>
+    </section>
+    <section id="story" class="container content story about" aria-labelledby="story-title">
+      <div>
+        <p class="eyebrow">01 / Our beginning</p>
+        <h2 id="story-title">Less paperwork.<br>More possibility.</h2>
+      </div>
+      <div class="story-copy">
+        <p>It started with a simple question: why should opening a bank account mean a stack of forms and a trip across
+          town?</p>
+        <p>Andrew Pringle founded CAM Credit Union LLC with a vision for a better banking experience. Alongside
+          Cofounder and Bookkeeper Mat Barret and CEO Carter McDougal, he brings together a passion for business, a love
+          of problem-solving, and a belief that people deserve clear, friendly service.</p>
+        <p>Our business offers checking and savings accounts, loans, and credit cards. Our next chapter is moving beyond
+          paper forms toward digital applications and better-organized records, with a personal connection at the heart
+          of it all.</p>
+      </div>
+    </section>
+    <section id="team" class="container content team-section about" aria-labelledby="team-title">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">02 / Meet the team</p>
+          <h2 id="team-title">The people behind CAM.</h2>
+        </div>
+        <p class="section-note">Three leaders, different strengths, and one shared vision.</p>
+      </div>
+      <div class="team">
+        <article class="person">
+          <div class="avatar" aria-hidden="true">MB</div>
+          <h3>Mat Barret</h3>
+          <p class="role">Bookkeeper & Cofounder</p>
+          <p>As Bookkeeper and Cofounder, Mat reviews account applications, keeps records organized, and helps maintain
+            accurate information for our team and members.</p>
+        </article>
+        <article class="person">
+          <div class="avatar" aria-hidden="true">CM</div>
+          <h3>Carter McDougal</h3>
+          <p class="role">CEO</p>
+          <p>As CEO, Carter guides the company’s direction and keeps the team focused on clear service, smooth
+            operations, and an approachable banking experience.</p>
+        </article>
+        <article class="person">
+          <div class="avatar" aria-hidden="true">AP</div>
+          <h3>Andrew Pringle</h3>
+          <p class="role">Network Engineer & Founder</p>
+          <p>As Founder and Network Engineer, Andrew brings the company’s vision to life and supports the network
+            infrastructure behind our digital banking goals.</p>
+        </article>
+      </div>
+    </section>
+    <section id="contact" class="contact-band" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">03 / Say hello</p>
+          <h2 id="contact-title">A conversation is<br>a great place to start.</h2>
+          <p class="contact-intro">Questions about CAM Credit Union? Interested in becoming a member? Reach out to our
+            team to learn how to get started.</p>
+          <dl class="contact-list">
+            <div>
+              <dt>Email</dt>
+              <dd>members@camcreditunion.org</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd>(202) 555-0147</dd>
+            </div>
+            <div>
+              <dt>Visit our branch</dt>
+              <dd>CAM Business Center · Room 203</dd>
+            </div>
+          </dl>
+          <p class="social">Instagram · @camcreditunion<br>Facebook · @camcreditunion</p>
+        </div>
+        <form class="form" id="contact-form">
+          <h3>Drop us a note.</h3>
+          <p>Have a question? Leave a note below.</p>
+          <div class="fields">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="off"
+                maxlength="80" placeholder="Alex Example" required></div>
+            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email"
+                autocomplete="off" maxlength="120" placeholder="alex@example.com" required></div>
+          </div>
+          <div class="field"><label for="message">Your message</label><textarea id="message" name="message"
+              maxlength="1500" placeholder="Tell us what you’re thinking…" required></textarea></div><button
+            class="button" type="submit">Send <span aria-hidden="true">↗</span></button>
+          <p id="form-status" class="status" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+    <section class="container content visit" aria-label="Hours and frequently asked questions">
+      <div>
+        <p class="eyebrow">04 / Visit us</p>
+        <h2>Here for you.<br>Every day.</h2>
+        <table class="hours">
+          <caption class="eyebrow" style="text-align:left;margin-bottom:12px">Hours of operation · Eastern Time
+          </caption>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Thursday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Friday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>8:00 AM–4:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="faq">
+        <p class="eyebrow">A few good questions</p>
+        <h2>Glad you asked.</h2>
+        <details>
+          <summary>What services does CAM offer?</summary>
+          <p>Our services include checking and savings accounts, loans, and credit cards. Contact our team with
+            questions about our services.</p>
+        </details>
+        <details>
+          <summary>What does CAM stand for?</summary>
+          <p>Our team’s first initials: Carter, Andrew, and Mat. Three different perspectives, brought together in one
+            name.</p>
+        </details>
+        <details>
+          <summary>Can I open an account in my pajamas?</summary>
+          <p>That’s the goal! We are working toward digital applications to make getting started from home easier. This
+            contact page does not accept account applications.</p>
+        </details>
+        <details>
+          <summary>What are your hours of operation?</summary>
+          <p>We are open every day from 8:00 AM to 4:00 PM Eastern Time.</p>
+        </details>
+        <details>
+          <summary>How can I reach the team?</summary>
+          <p>You can email our team at <a href="mailto:members@camcreditunion.org">members@camcreditunion.org</a> with
+            questions about CAM Credit Union and our services.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container"><span>© 2026 CAM Credit Union LLC</span><span><a href="#main">Back to top ↑</a></span></div>
+  </footer>
+  <script>
+    'use strict';
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (event) {event.preventDefault(); if (!form.reportValidity()) return; const status = document.getElementById('form-status'); status.textContent = 'Your message passed validation. This is a preview only; nothing was sent or saved.'; status.hidden = false; form.reset();});
+  </script>
+</body>
+
+</html>
